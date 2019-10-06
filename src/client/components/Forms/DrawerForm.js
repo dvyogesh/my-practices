@@ -48,12 +48,13 @@ DrawerForm.propTypes = {
   handleForm: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,
   isReadOnly: PropTypes.bool,
-  getUploadedFile: PropTypes.func.isRequired
+  getUploadedFile: PropTypes.func
 }
 
 DrawerForm.defaultProps = {
   heading: 'heading',
-  isReadOnly: false
+  isReadOnly: false,
+  getUploadedFile: () => {}
 }
 
 export default DrawerForm

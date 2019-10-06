@@ -1,14 +1,16 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
 import PropTypes from 'prop-types'
-import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from '@material-ui/core'
-
+import {
+  Dialog, DialogActions, DialogContent, DialogContentText,
+  DialogTitle
+} from '@material-ui/core'
 
 export default class FormDialog extends React.Component {
   render () {
     const {
-      children, handleClose, openState=true  , submitBtnText, nextStep, dialogContentText="dialogContent",
-      dialogHeadding, disableBackdropClick, maxWidth, handleSubmit
+      children, handleClose, openState = true, submitBtnText, dialogContentText = 'dialogContent',
+      dialogHeadding, maxWidth, handleSubmit
     } = this.props
     return (
       <div>
@@ -44,20 +46,18 @@ FormDialog.propTypes = {
   openState: PropTypes.bool,
   submitBtnText: PropTypes.string,
   dialogHeadding: PropTypes.string,
-  nextStep: PropTypes.bool,
-  disableBackdropClick: PropTypes.bool,
   dialogContentText: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
-  ]).isRequired
-
+  ]).isRequired,
+  maxWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  handleSubmit: PropTypes.func.isRequired
 }
 FormDialog.defaultProps = {
   openState: false,
-  nextStep: false,
   submitBtnText: 'Save',
   dialogContentText: '',
   dialogHeadding: '',
-  disableBackdropClick: false
+  maxWidth: 360
 }

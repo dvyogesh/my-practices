@@ -2,6 +2,7 @@ import React from 'react'
 import {makeStyles} from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
 import {CardContent} from '@material-ui/core'
+import PropTypes from 'prop-types'
 
 const useStyles = makeStyles({
   card: {
@@ -25,4 +26,8 @@ export default function EmptyCard ({...props}) {
       </CardContent>
     </Card>
   )
+}
+
+EmptyCard.propTypes = {
+  children: PropTypes.node.isRequired
 }
