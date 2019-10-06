@@ -7,7 +7,7 @@ const customDrawerStyle = {
     fontWeight: 600,
     zIndex: 1000,
     width: 'inherit',
-    padding: 5,
+    padding: '5px 0px',
     borderBottom: '1px solid #e6e7e8'
   },
   heading: {

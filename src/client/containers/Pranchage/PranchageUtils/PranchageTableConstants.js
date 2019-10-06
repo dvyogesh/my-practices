@@ -1,9 +1,11 @@
 import React from 'react'
-import {Button, Tooltip} from '@material-ui/core'
+import {Tooltip} from '@material-ui/core'
+import Button from '../../../components/Buttons'
 import PropTypes from 'prop-types'
+import { makeStyles } from '@material-ui/core/styles';
 //import {handleDelete} from '../../helper/commonMethods'
 
-const PranchageTableConstants = (that, classes) => [
+const PranchageTableConstants = (that) =>  [
   {
     Header: 'Name',
     accessor: 'name',
@@ -21,30 +23,33 @@ const PranchageTableConstants = (that, classes) => [
   },
   {
     Header: 'View',
+    style: {padding: '0px'},
     Cell: row => (
       <Button
-        className={classes.tableButtons}
         variant="outlined"
         color="primary"
+        size="small"
         onClick={() => that.handleView(row.original)}
       >
        View
       </Button>
     ),
+
     width: 100
   },
   {
     Header: 'Edit',
     Cell: row => (
       <Button
-        className={classes.tableButtons}
         variant="outlined"
         color="primary"
+        size="small"
         onClick={() => that.handleEdit(row.original)}
       >
        Edit
       </Button>
     ),
+    style: {padding: '0px'},
     width: 100
   },
   {
@@ -53,19 +58,20 @@ const PranchageTableConstants = (that, classes) => [
       const {original: {componentType, onBoardingType, id}} = row
       return (
         <Button
-          className={classes.tableButtons}
           variant="outlined"
           color="secondary"
+          size="small"
           onClick={() => {
             //handleDelete(`v1/${onBoardingType}/${componentType.toLowerCase()}/${id}`, that.getOnBoardedComponents, that.toggleLoader)
           }
           }
           disabled={row.original.status === 'DELETED'}
         >
-       Delete
+          Delete
         </Button>
       )
     },
+    style: {padding: '0px'},
     width: 120
   },
   {
@@ -79,5 +85,7 @@ const PranchageTableConstants = (that, classes) => [
     width: 200
   }
 ]
+
+
 
 export default PranchageTableConstants

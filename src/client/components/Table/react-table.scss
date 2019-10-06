@@ -1,0 +1,115 @@
+.ReactTable {
+  width: 100%;
+  border: 1px solid #E6E7E8;
+  .rt-tbody {
+    background: white;
+    .rt-td{
+      font-size:0.85rem;
+      //text-align: center;
+      text-align: left !important;
+      border-right: 0px;
+      height: 32px;
+      font-weight: 500;
+      padding: 7px 20px;
+      color: rgba(0, 0, 0, .87);
+      display: flex;
+      align-items: center;
+    }
+    .rt-tr-group {
+      &:nth-child(2n){
+        background: rgba(236, 241, 244, .47);
+      }
+    }
+  }
+  .rt-thead.-header {
+    box-shadow: none;
+    background-color: white;
+    color: rgba(0, 0, 0, .6);
+    border-bottom: 1px solid #d9d9d9;
+    padding: 5px 0px;
+  }
+  .rt-thead {
+    .rt-th {
+      font-size: 0.85rem;
+      border-right: 0;
+      padding: 5px 20px;
+    }
+    .rt-th.-sort-asc, .rt-td.-sort-asc, .rt-th.-sort-desc, .rt-td.-sort-desc {
+      box-shadow: none;
+    }
+    .rt-td {
+      border-right: 0;
+      padding: 5px 20px;
+    }
+    .rt-tr {
+      text-align: left;
+    }
+  }
+  .rt-thead.-filters{
+    background: rgba(236, 241, 244, .47);
+    .rt-th {
+      border-right: 0;
+      padding: 0 17px;
+    }
+  }
+  .rt-tr{
+    padding: 5px 0;
+  }
+  .pagination-bottom{
+    background: white;
+  }
+  .-pagination {
+    background: white;
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    display: block;
+    text-align: right;
+    box-shadow: none;
+    .-previous, .-next {
+      display: inline-block;
+    }
+    .-previous{
+      margin-right: 15px;
+    }
+    .-center{
+      display: inline-block;
+      float: left;
+      padding-bottom: 5px;
+    }
+    .-next{
+      float: right;
+    }
+    .-btn {
+      color: rgba(0, 0, 0, .87);
+      background-color: #d4dee4;
+      padding: 5px 10px;
+    }
+    .-pageInfo {
+      font-weight: 400;
+    }
+  }
+  .-pagination .-btn:hover, .ReactTable .-pagination .-btn:not([disabled]):hover {
+    background: rgba(13, 13, 13, 0.16);
+    color: rgba(0, 0, 0, .87);
+  }
+}
+.ReactTable.-striped .rt-tr.-odd {
+  background: rgba(13, 13, 13, 0.16);
+}
+.ReactTable.-highlight .rt-tbody .rt-tr:not(.-padRow):hover {
+  background: rgba(173, 173, 173, 0.16);
+}
+
+.ReactTable.-highlight .rt-th.rt-resizable-header.-cursor-pointer {
+  white-space: normal;
+}
+.TwoDay-shipping .ReactTable .rt-tbody{
+  max-height: 640px;
+}
+.component-list .ReactTable .rt-tbody{
+  max-height: 500px;
+}
+.rt-tbody {
+  padding-bottom: 20px;
+}

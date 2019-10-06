@@ -22,6 +22,11 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch,Link } from 'react-router-dom';
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles'
 import AdminPranchage from '../containers/AdminPranchage/AdminPranchage'
+import Pranchage from '../containers/pranchage/pranchage'
+import Account from '../containers/Account/Account'
+import Orders from '../containers/Account/Orders/Orders'
+import Profile from '../containers/Account/Profile/Profile'
+import Addresses from '../containers/Account/Addresses/Addresses'
 import App from '../App'
 
 // import Root from './Root';
@@ -53,8 +58,20 @@ class Routes extends Component {
                             <Route exact path="/" component={Home} />
                             <Route exact path="/home" component={Home} />
                             <Route exact path="/adminPranchage" component={AdminPranchage} />
+                            <Route exact path="/pranchage" component={Pranchage} />
                             <Route exact path="/about" component={About} />
                             <Route exact path="/about/:id" component={Aboutyy} />
+                              <Account>
+                                <Switch>
+                                  <Route  path="/account" exact component={Profile} />
+                                  <Route  path="/account/orders" component={Orders} />
+                                  <Route  path="/account/addresses" component={Addresses} />
+                                </Switch>
+                                {
+                                  //TO UNDERSTAND ROUTE HAVE A LOOK
+                                  //https://codedaily.io/tutorials/45/Create-Nested-Tab-Routes-with-Dynamic-Paths-with-React-Router
+                                }
+                              </Account>
                             <Route component={NoMatch} />
                         </Switch>
                     </App>

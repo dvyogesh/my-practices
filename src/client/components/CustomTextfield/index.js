@@ -18,6 +18,7 @@ class CustomTextField extends Component {
     required: bool,
     error: bool,
     errorMsg: string,
+    variant: string,
     multiline: bool,
     rows: number
   }
@@ -29,12 +30,16 @@ class CustomTextField extends Component {
     disabled: false,
     required: false,
     error: false,
-    errorMsg: 'This field is mandatory'
+    errorMsg: 'This field is mandatory',
+    variant: 'standard',
+    rows: 3,
+    multiline: false
   }
 
   render () {
     const {
-      classes, value, id, label, onChange, placeholder, type, onBlur, disabled, required, error, errorMsg, multiline = false, rows = 3
+      classes, value, id, label, onChange, placeholder, type, onBlur, disabled, required, error, errorMsg,
+      multiline = false, rows, variant
     } = this.props
     return (
       <Fragment>
@@ -54,6 +59,7 @@ class CustomTextField extends Component {
           disabled={disabled}
           required={required}
           error={error}
+          variant={variant}
           {...(multiline ? {multiline: true, rows} : {})}
         />
         {error && <span className={classes.errorText}>{errorMsg}</span>}

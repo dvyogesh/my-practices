@@ -1,23 +1,27 @@
-import './app.css';
-import React, { Component } from 'react';
-class App extends Component {
-  constructor(props){
-    super(props)
-  }
-    render() {
-        return (
-          <div>
-            <div>
-              <img src="../../public/header.png" />
-            </div>
-            {this.props.children}
-            <div>
-              footer
-            </div>
-          </div>
+import React, {Component} from 'react'
+import PropTypes from 'prop-types'
+import Header from './containers/Header/Header'
+import 'react-table/react-table.css'
+import './components/Table/react-table.scss'
+import './app.css'
 
-        );
-    }
+class App extends Component {
+  render () {
+    const {children} = this.props
+    return (
+      <div>
+        <Header />
+        {children}
+        <div>
+          footer
+        </div>
+      </div>
+    )
+  }
 }
 
-export default App;
+App.propTypes = {
+  children: PropTypes.node.isRequired
+}
+
+export default App

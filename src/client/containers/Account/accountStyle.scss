@@ -1,0 +1,146 @@
+.margin-bw-left-panel {
+  margin-left: 10px
+}
+.card-white {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
+}
+
+.account-main {
+  min-height: 80vh;
+  background-color: #f1f3f6;
+  padding: 14px 64px 0;
+  .account-warpper {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .profile-name-pic {
+    padding: 12px;
+    svg {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #ffe11a;
+      color: #47c3d0;
+      padding: 5px;
+    }
+    .account-name {
+      padding-left: 5px;
+      .hello {
+        font-family: DINPro-Regular;
+        font-size: 12px;
+        padding: 8px 0px 0px 0px;
+      }
+    }
+  }
+
+  .account-option-panel {
+    margin-top: 10px;
+    .option-list{
+      li{
+        display: block;
+        border-bottom: thin solid #f1f3f6;
+        a{
+          padding: 20px 12px 10px 24px;
+          font-family: DINPro-Medium;
+          font-size: 16px;
+          font-weight: 500;
+          color: #878787;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .profile-main {
+    @extend .margin-bw-left-panel;
+    margin-left:10px;
+    padding: 24px 32px;
+  }
+
+  .orders-main {
+    @extend .margin-bw-left-panel;
+    padding: 5px;
+    .order-panel {
+      border:1px solid #d7d7d7;
+      margin-top: 10px;
+      .order-panel-well {
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #f1f3f6;
+        padding: 5px 10px;
+        .order-id{
+          width: 49%;
+        }
+      }
+    }
+    .order-trck {
+      font-family: DINPro-Regular;
+      font-size: 14px;
+      color: #212121;
+      svg{
+        vertical-align: bottom;
+        color: #3f51b5;
+        font-size: 16px;
+      }
+      .track-btn {
+        white-space: nowrap;
+        padding: 6px 0;
+        width: 100px;
+        text-decoration: none;
+        color: #212121;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 2px;
+        background: #f9f9f9;
+        border: 1px solid #d7d7d7;
+        margin-left: 10px;
+      }
+    }
+
+    .order-detail{
+      padding: 10px;
+      .thumbnail {
+        height: 100px;
+        width: 100px;
+        border: thin solid #f0f0f0;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .addresses-main {
+    @extend .margin-bw-left-panel;
+    padding: 10px;
+    .address-panel{
+      @extend  .card-white;
+      border: 1px solid #f1f3f6;
+      padding: 10px;
+      margin-top: 10px;
+      .address-type {
+        span{
+          text-transform: uppercase;
+          font-size: 11px;
+          color: #878787;
+          vertical-align: middle;
+          padding: 4px 7px;
+          border-radius: 2px;
+          background-color: #f0f0f0;
+          font-weight: 500;
+          margin-right: 15px;
+        }
+      }
+      .address-detail{
+        p{
+          font-family: DINPro-Regular;
+          font-size: 14px;
+        }
+      }
+    }
+    .small-fab {
+      svg{font-size: 20px}
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.header-main {
+      background: #232176;
+}
+.header-first-section {
+  a{
+    margin: 10px;
+    color: #fff;
+    font-family: DINPro-Medium;
+    opacity: .7;
+    font-size: 14px;
+  }
+}
+
+.header-fist-right, .header-second-right {
+  padding: 10px 15px 0;
+  ul{
+    li{
+      display: inline-block;
+      .phon-icon{
+        font-size: 16px;
+      }
+    }
+
+  }
+}
+
+.header-second-section{
+  padding: 15px;
+  img{
+    width: 100px;
+  }
+  a{
+    font-family: 'DINPro-Regular';
+    font-size: 14px;
+    color:#fff;
+  }
+  .upload-prescription{
+    padding: 7px 10px;
+    vertical-align: middle;
+    background-color: #fff;
+    max-width: 250px;
+    margin: 0 auto;
+    svg{
+      vertical-align: middle;
+      margin: 0px 10px;
+    }
+  }
+}

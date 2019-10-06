@@ -3,7 +3,7 @@ export default {
   //   {name: 'Admin Pranchage', value: 'adminPranchage'},
   //   {name: 'Pranchage', value: 'Pranchage'},
   // ],
-  adminPranchage: [
+  patient: [
     {
       name: 'name',
       type: 'text',
@@ -61,7 +61,7 @@ export default {
       multiline: true,
       value: '',
       isRequired: false
-    }
+    },
 
   ]
 }
